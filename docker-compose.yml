@@ -1,0 +1,16 @@
+version: "2"
+services:
+  monit:
+    image: jchonig/mmonit
+    container_name: mmonit
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - MMONIT_LICENSE_OWNER="Fred"
+      - MMONIT_LICENSE_KEY="<M/Monit license key>"
+    volumes:
+      - </path/to/appdata/config>:/config
+    expose:
+      - 8080
+    restart: unless-stopped
