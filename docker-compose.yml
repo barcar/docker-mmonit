@@ -10,7 +10,11 @@ services:
       - MMONIT_LICENSE_OWNER="Fred"
       - MMONIT_LICENSE_KEY="<M/Monit license key>"
     volumes:
-      - </path/to/appdata/config>:/config
+      - mmonit_data:/config
+      - /etc/localtime:/etc/localtime:ro
     expose:
       - 8080
     restart: unless-stopped
+volumes:
+  mmonit_data:
+    external: true
