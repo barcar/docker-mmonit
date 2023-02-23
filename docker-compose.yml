@@ -14,7 +14,7 @@ services:
       - mmonit_data:/config
       - /etc/localtime:/etc/localtime:ro
     expose:
-      - 8080
+      - 9292:8080
     restart: unless-stopped
 volumes:
   mmonit_data:
