@@ -13,7 +13,7 @@ services:
     volumes:
       - mmonit_data:/config
       - /etc/localtime:/etc/localtime:ro
-    expose:
+    ports:
       - 9292:8080
     restart: unless-stopped
 volumes:
