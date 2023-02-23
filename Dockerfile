@@ -2,7 +2,7 @@ From lsiobase/alpine:3.17
 
 ARG mmonit_version
 ARG mmonit_os=alpine
-ARG mmonit_architecture=x64
+ARG mmonit_architecture=arm64
 ARG mmonit_url=https://mmonit.com/dist/mmonit-${mmonit_version}-${mmonit_os}-${mmonit_architecture}.tar.gz
 
 ENV \
