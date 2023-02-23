@@ -1,8 +1,9 @@
 version: "2"
 services:
   monit:
-    image: jchonig/mmonit
-    container_name: mmonit
+    build: .
+    pull_policy: build
+    container_name: monit
     environment:
       - PUID=1000
       - PGID=1000
