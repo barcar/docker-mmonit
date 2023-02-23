@@ -15,6 +15,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 9292:8080
+      - 9293:8443
     restart: unless-stopped
 volumes:
   mmonit_data:
