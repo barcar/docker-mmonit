@@ -8,8 +8,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      #- MMONIT_LICENSE_OWNER="Fred"
-      #- MMONIT_LICENSE_KEY="<M/Monit license key>"
+      - MMONIT_LICENSE_OWNER="$MMONIT_OWNER"
+      - MMONIT_LICENSE_KEY="$MMONIT_LICENSE_KEY"
     volumes:
       - mmonit_data:/config
       - /etc/localtime:/etc/localtime:ro
