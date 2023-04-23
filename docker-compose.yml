@@ -13,8 +13,9 @@ services:
     volumes:
       - mmonit_data:/config
       - /etc/localtime:/etc/localtime:ro
-    ports:
-      - 9292:8080
+    network_mode: host
+    #ports:
+    #  - 9292:8080
     restart: unless-stopped
 volumes:
   mmonit_data:
