@@ -12,7 +12,6 @@ services:
       - MMONIT_LICENSE_KEY=$MMONIT_LICENSE_KEY
     volumes:
       - mmonit_data:/config
-      - /var/spool/postfix/pid:/var/spool/postfix/pid
       - /etc/localtime:/etc/localtime:ro
     network_mode: host
     #ports:
